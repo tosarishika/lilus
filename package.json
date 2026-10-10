@@ -1,0 +1,10 @@
+{
+  "name": "little-us",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "python3 -m http.server 4173",
+    "check": "node --check app.js && node --check pet-ui.js && node --check pet-room.js && node --check pet-album.js && node --test pet-engine.test.js"
+  }
+}
