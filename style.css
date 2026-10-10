@@ -39,3 +39,25 @@ body{background:var(--paper)}h1{color:#ede9f5}h2,h3{color:#c4a3ff}.brand{color:#
 
 /* Account-first entrance to the shared space. */
 .auth-shell{min-height:100vh;display:flex;align-items:center;justify-content:center;flex-direction:column;padding:32px 18px;background:radial-gradient(ellipse at 20% 15%,#39283b66,transparent 55%),radial-gradient(ellipse at 90% 85%,#28413844,transparent 55%),#101116}.auth-card{width:100%;max-width:460px;padding:38px;border:1px solid #70556c;border-radius:28px;background:#181820;box-shadow:0 25px 90px #0005}.auth-card .brand{text-align:center}.auth-card h1{font-size:32px;text-align:center;line-height:1.2;margin:22px 0 14px}.auth-card>p{text-align:center;line-height:1.7}.auth-portraits{display:flex;justify-content:center;margin-top:28px;gap:12px}.auth-portraits img{width:72px;height:72px;border-radius:50%;border:2px solid #b88ba5;object-fit:cover}.auth-tabs{display:flex;gap:10px;margin:20px 0}.auth-tabs button{flex:1;border:1px solid #57425e;border-radius:12px;padding:12px;background:transparent;color:#bfb0cf}.auth-tabs button.selected{border-color:#e4aac4;color:#e4aac4;background:#33222f}.auth-card .btn{width:100%;margin-top:12px}.auth-card .field{margin-top:18px}.auth-divider{text-align:center;color:#b7a6c6;font-size:12px;margin:24px 0}.auth-hint,.auth-footer{font-size:12px}.auth-footer{color:#998ba8;margin-top:24px}#auth-message{color:#edbed1;font-size:13px;min-height:20px}@media(max-width:480px){.auth-card{padding:26px}.auth-card h1{font-size:28px}}
+
+/* Keep intrinsic card and media widths inside the device viewport. */
+.layout{grid-template-columns:225px minmax(0,1fr)}
+.main,.grid>*,.stack,.card,.pet-tab-content,.pet-layout>*,.row>*{min-width:0}
+.grid{grid-template-columns:minmax(0,1.3fr) minmax(0,1fr)}
+img,video,canvas{max-width:100%}video{height:auto}
+.card,.entry,.note,.bubble,.pill{overflow-wrap:anywhere}
+input,textarea,select{min-width:0}
+@media(max-width:850px){
+ .layout{display:block}.sidebar{height:auto;position:static;padding:20px 18px 0;border-right:0}.sidebar-bottom{display:none}.tagline{margin-bottom:16px}
+ .nav{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;overflow:visible}.nav button{min-width:0;white-space:normal;justify-content:center;text-align:center;padding:10px 5px;font-size:11px;gap:5px}.nav .icon{flex-shrink:0;width:auto;font-size:17px}
+ .main{padding:18px;max-width:100%}.grid,.pet-layout{grid-template-columns:minmax(0,1fr)}.greeting{gap:12px;flex-wrap:wrap}.date{width:100%}
+}
+@media(max-width:650px){
+ .topbar{flex-wrap:wrap;gap:12px}.avatars{max-width:100%;flex-wrap:wrap}.pill{max-width:calc(100vw - 120px);white-space:normal;text-align:left}.row,.section-title,.card-head,.pet-game-header,.pet-header-meta{flex-wrap:wrap}
+ .card{padding:18px}.main{padding:16px 12px 30px}.greeting h1{font-size:30px}.tiny{letter-spacing:1.1px}.note{transform:none;font-size:21px}.hero .big{font-size:42px}.hero h2{max-width:85%}
+ .interactive-pet-panel{padding:12px}.room-toolbar{align-items:flex-start}.immersive-room{width:100%;height:360px;min-height:0}.room-needs{grid-template-columns:repeat(2,minmax(0,1fr))}.need-button{min-width:0}.pet-thought{max-width:130px}
+ .home-scene .pet-actor{width:clamp(125px,46%,180px)}.home-scene .pet-actor.in-bed{width:125px}.family-portrait{gap:8px}.family-portrait img{width:100px}.family-avatar.profile-picture{width:44px;height:44px}
+ .pet-bottom-nav,.main-care{display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}.pet-bottom-nav button,.main-care button{min-width:0;white-space:normal}.pet-scrapbook{grid-template-columns:minmax(0,1fr)}
+ .is-immersive{padding:calc(12px + env(safe-area-inset-top)) 12px calc(16px + env(safe-area-inset-bottom))!important}.is-immersive .immersive-room{height:48svh;min-height:260px}.is-immersive.care-open .immersive-room{height:32svh;min-height:220px}.is-immersive.care-open .home-scene .pet-actor{width:145px}
+ dialog{max-height:85svh;overflow-y:auto;padding:20px;width:calc(100% - 24px);max-width:480px}input,textarea,select{font-size:16px}.modal-head{gap:12px}.modal-head h2{min-width:0;font-size:23px}.auth-shell{min-height:100svh;padding:20px 12px}.auth-card{padding:24px 20px}
+}
